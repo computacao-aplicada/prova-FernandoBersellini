@@ -15,8 +15,20 @@ public class ValidadorTest {
     }
 
     @Test
+    public void validarCPFcomEspacos() {
+        assertEquals(true, Validador.validarCPF(" 529.982.247-25 "));
+    }
+
+    @Test
     public void validarCPFvazio(){
         assertEquals(false, Validador.validarCPF(""));
     }
+
+    @Test
+    public void validarCPFnulo(){
+        assertEquals(false, Validador.validarCPF(null));
+    }
+
+
 
 }
