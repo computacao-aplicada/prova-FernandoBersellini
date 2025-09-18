@@ -49,4 +49,14 @@ public class ValidadorTest {
         assertEquals(false, Validador.validarCPF("000.000.000-00"));
     }
 
+    @Test
+    public void validarCPFmesmoCPF(){
+        assertEquals(false,  Validador.validarCPF("529.982.247-24"));
+    }
+
+    @Test
+    public void validarCPdvIncorreto(){
+        assertEquals(false,  Validador.validarCPF("123.456.789-00"));
+    }
+
 }
