@@ -43,4 +43,10 @@ public class ValidadorTest {
     public void validarCPFCaractereInvalido(){
         assertEquals(false, Validador.validarCPF("529.982.247-2X"));
     }
+
+    @Test
+    public void validarCPFsequenciaRepetida(){
+        assertEquals(false, Validador.validarCPF("000.000.000-00"));
+    }
+
 }
