@@ -29,6 +29,13 @@ public class ValidadorTest {
         assertEquals(false, Validador.validarCPF(null));
     }
 
+    @Test
+    public void validarCPFtamanhoMenor(){
+        assertEquals(false, Validador.validarCPF("935.411.347-8"));
+    }
 
-
+    @Test
+    public void validarCPFtamanhoMaior(){
+        assertEquals(false, Validador.validarCPF("935.411.347-800"));
+    }
 }
