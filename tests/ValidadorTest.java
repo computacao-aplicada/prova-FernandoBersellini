@@ -38,4 +38,9 @@ public class ValidadorTest {
     public void validarCPFtamanhoMaior(){
         assertEquals(false, Validador.validarCPF("935.411.347-800"));
     }
+
+    @Test
+    public void validarCPFCaractereInvalido(){
+        assertEquals(false, Validador.validarCPF("529.982.247-2X"));
+    }
 }
